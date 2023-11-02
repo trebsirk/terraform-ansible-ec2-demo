@@ -1,0 +1,1 @@
+# Create an EC2 instance with Terraform and Ansible
