@@ -1,4 +1,5 @@
 ssh-keygen -t ed25519 -C "devops ssh"
+ssh-keygen -C "ansible"
 
 cp ~/.ssh/id_ed25519 devops-ssh-key.pem 
 chmod 400 devops-ssh-key.pem
@@ -18,6 +19,8 @@ ssh -i devops-ssh-key.pem ec2-user@54.201.98.144
 
 # works
 ssh -i devops-ssh-key.pem ec2-user@34.212.20.17
+ssh -i devops-ssh-key.pem ec2-user@35.89.102.19
+ssh -i devops-ssh-key.pem ec2-user@35.89.93.201
 
 # for key-pairs with passcodes
 alias ssha='eval $(ssh-agent) && ssh-add'
