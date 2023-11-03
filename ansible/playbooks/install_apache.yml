@@ -1,0 +1,23 @@
+---
+
+- hosts: all
+  become: yes 
+  remote_user: ec2-user
+  
+  tasks:
+    - name: update cache
+      yum:
+        name: '*'
+        state: latest
+    - name: update cache another way
+      yum:
+        update_cache: yes
+    - name: install httpd (apache2) package
+      yum:
+        name: httpd
+        state: present
+    - name: Make sure a service unit is running
+      ansible.builtin.systemd:
+        name: httpd
+        state: started
+      

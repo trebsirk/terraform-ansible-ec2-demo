@@ -21,6 +21,7 @@ ssh -i devops-ssh-key.pem ec2-user@54.201.98.144
 ssh -i devops-ssh-key.pem ec2-user@34.212.20.17
 ssh -i devops-ssh-key.pem ec2-user@35.89.102.19
 ssh -i devops-ssh-key.pem ec2-user@35.89.93.201
+ssh -i devops-ssh-key.pem ec2-user@35.162.117.35
 
 # for key-pairs with passcodes
 alias ssha='eval $(ssh-agent) && ssh-add'
