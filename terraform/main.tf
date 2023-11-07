@@ -52,6 +52,7 @@ resource "aws_instance" "devops_demo_server" {
   ami                         = "ami-04e914639d0cca79a"
   instance_type               = "t2.micro"
   key_name                    = "devops-ssh-key"
+  count                       = 1
   associate_public_ip_address = true
   vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
   subnet_id                   = aws_subnet.example.id

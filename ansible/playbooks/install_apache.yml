@@ -25,4 +25,4 @@
       ansible.builtin.systemd:
         name: httpd
         state: started
-      
+        enabled: yes
